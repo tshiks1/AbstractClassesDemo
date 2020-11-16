@@ -14,6 +14,10 @@ namespace ConsoleUI
         {
             return true;
         }
+        public bool NumberOsWheels()
+        {
+            return true;
+        }
         public override void DriveVirtual()
         {
             base.DriveVirtual();

@@ -35,26 +35,31 @@ namespace ConsoleUI
 
            
             /*
-             * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
+             * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing)
+             * but use constuctors from derived classes
              * - new it up as one of each derived class
              * Set the properties with object initializer syntax
              */
 
 
             Car mazda = new Car() {Make="Mazda",Model="Protege", Year=2016 };
-            Motorcycle motor = new Motorcycle();
+            Motorcycle motor = new Motorcycle() { Make="Suzuki",Model= "Posh", Year=2030};
 
             Vehicle nissan = new Car();
-            Vehicle honda = new Motorcycle();
+            Vehicle honda = new Motorcycle() {  Year=2020,Model= "Accord", Make= "Honda"};
 
             var vehicles = new List<Vehicle>();
            // List<Vehicle> vehicles1 = new List<Vehicle>();  explicit typing.
             vehicles.Add(mazda);
             vehicles.Add(nissan);
             vehicles.Add(honda);
-            vehicles.Add(honda);
+            vehicles.Add(motor);
+            
 
-
+            foreach(var item in vehicles)
+            {
+                Console.WriteLine($"I have {vehicles.Count}  vehicles in my list.Which are {item.Make} {item.Model}");
+            }
 
 
 
